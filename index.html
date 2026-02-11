@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gioco Canvas - Centrato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="startGame()">
+
+    <div class="game-container">
+        
+        <div id="controls">
+            <button onclick="moveup()">SU</button>
+            <div class="row">
+                <button onclick="moveleft()">SINISTRA</button>
+                <button onclick="moveright()">DESTRA</button>
+            </div>
+            <button onclick="movedown()">GIÙ</button>
+        </div>
+    </div>
+    <div class="game-container">
+    <div id="score-container">
+        <span class="score-label">SCORE</span>
+        <span id="score-value">0</span>
+    </div>
+
+    <div id="controls">
+        </div>
+</div>
+    <script src="java.js"></script>
+</body>
+</html>
