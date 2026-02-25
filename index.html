@@ -3,31 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gioco Canvas - Centrato</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Semplice Gioco Canvas</title>
+    <style>
+        /* Stile generale della pagina */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #2c3e50;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Contenitore del gioco */
+        .game-container {
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        canvas {
+            background-color: #ecf0f1;
+            display: block;
+            border-radius: 4px;
+            cursor: crosshair;
+        }
+
+        /* Pannello del punteggio */
+        .score-panel {
+            font-size: 24px;
+            margin-bottom: 15px;
+            background: rgba(0,0,0,0.3);
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 2px solid #3498db;
+        }
+
+        #score-value {
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .instructions {
+            margin-top: 15px;
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body onload="startGame()">
 
-    <div class="game-container">
-        
-        <div id="controls">
-            <button onclick="moveup()">SU</button>
-            <div class="row">
-                <button onclick="moveleft()">SINISTRA</button>
-                <button onclick="moveright()">DESTRA</button>
-            </div>
-            <button onclick="movedown()">GIÙ</button>
-        </div>
-    </div>
-    <div class="game-container">
-    <div id="score-container">
-        <span class="score-label">SCORE</span>
-        <span id="score-value">0</span>
+    <div class="score-panel">
+        Punteggio: <span id="score-value">0</span>
     </div>
 
-    <div id="controls">
+    <div class="game-container">
         </div>
-</div>
+
+    <p class="instructions">Usa le <b>Frecce Su/Giù</b> per schivare gli ostacoli!</p>
+
     <script src="java.js"></script>
+
 </body>
 </html>
